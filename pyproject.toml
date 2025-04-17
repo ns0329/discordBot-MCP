@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "discord-service"
+version = "0.1.0"
+description = "Discord MCP Service"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=1.2.0",
+    "python-dotenv>=1.0.1",
+    "pydantic>=2.0.0"
+]
+
+[project.scripts]
+discord-service = "discord_service.server:run_server"
